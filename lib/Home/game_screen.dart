@@ -311,10 +311,12 @@ class _GamescreenState extends State<Gamescreen> {
                           Positioned(
                               top: 120,
                               left: 30,
-                              child: Image.asset(
-                                musicValue == 0 ? off_music : music,
-                                width: 30,
-                                height: 30,
+                              child: StatefulBuilder(
+                                builder: (context, setState) => Image.asset(
+                                  musicValue == 0 ? off_music : music,
+                                  width: 30,
+                                  height: 30,
+                                ),
                               )),
                           Positioned(
                             top: 170,
@@ -329,11 +331,7 @@ class _GamescreenState extends State<Gamescreen> {
                             top: 200,
                             left: 126,
                             child: ElevatedButton(
-                              style: const ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll(
-                                  Colors.transparent,
-                                ),
-                              ),
+                              style: ButtonStyle(),
                               child: Row(
                                 children: [
                                   Icon(

@@ -1,4 +1,5 @@
 import 'package:blackjack/Home/firstsrean.dart';
+import 'package:blackjack/Home/homescreen.dart';
 import 'package:blackjack/const/blackjack_game.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
     );
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: FirstScreen(),
+      home: HomeScreen(),
     );
   }
 }
